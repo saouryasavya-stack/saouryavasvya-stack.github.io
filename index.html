@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurya | Research & Academic Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --primary-color: #0f4c81;
+            --secondary-color: #5c6b73;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+            --accent-color: #e63946;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+        }
+
+        /* Sidebar Styling */
+        aside {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #dee2e6;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .profile-card h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            text-align: left;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .nav-links li a {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Content Area Styling */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        section {
+            scroll-margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #495057;
+            text-align: justify;
+        }
+
+        /* Grid Content Cards */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            color: var(--primary-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        /* Contact Details */
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 2rem;
+            }
+            aside {
+                position: relative;
+                top: 0;
+            }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+            .nav-links li {
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar Navigation & Quick Profile -->
+        <aside>
+            <div class="profile-card">
+                <div class="avatar">S</div>
+                <h1>Saurya</h1>
+                <p class="tagline">Scientist & Academic Researcher<br>Microelectronics & Advanced Semiconductor Devices</p>
+                
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#research">Research Verticals</a></li>
+                    <li><a href="#publications">Publications & Patents</a></li>
+                    <li><a href="#teaching">Teaching & Courseware</a></li>
+                    <li><a href="#hardware">Engineering & Hardware</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Profiles -->
+        <main>
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Welcome! I am an active scientific researcher and academic focusing on next-generation semiconductor materials, wide-bandgap microelectronic frameworks, and micro-electromechanical systems (MEMS).</p>
+                <p>My work bridges underlying materials science exploration with practical device architecture fabrication. This includes designing scalable hardware prototypes, establishing robust engineering criteria for optoelectronic devices, and translating research configurations into clean physical components capable of precise metrics deployment.</p>
+            </section>
+
+            <!-- Research Verticals Section -->
+            <section id="research">
+                <h2>Research Verticals & Proposals</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <div class="card-meta">Active Proposal Architecture</div>
+                        <h3>Advanced Electro-Optic Technologies</h3>
+                        <p>Investigation into wide-bandgap heterojunction architectures optimized for deep UV spectrum monitoring and high responsivity. This framework addresses critical operational profiles under challenging environmental metrics.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta">Materials Exploration</div>
+                        <h3>Wide-Bandgap & 2D Integration</h3>
+                        <p>Probing scalable crystal growth methodologies, interface alignment configurations, and carrier dynamics properties across diverse dimensional limits to achieve high-efficiency signal isolation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications & Patents Section -->
+            <section id="publications">
+                <h2>Publications & Patents</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <span class="badge" style="background:#d4edda; color:#155724;">Patent Filed</span>
+                        <h3 style="margin-top: 0.5rem;">Enhanced Responsivity UV Detection Arrays</h3>
+                        <p>Architecture configuration leveraging geometry-optimized sensor alignments to maximize tracking accuracy and spatial registration capabilities across multi-element arrays.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta">Peer-Reviewed Contributions</div>
+                        <h3>Analytical Modeling of High-Mobility Thin Films</h3>
+                        <p>Developing robust behavioral models tracking localized transport mechanics and field dependencies inside extreme-environment electronics environments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching">
+                <h2>Teaching & Courseware Design</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <div class="card-meta">Comprehensive Syllabus Dev</div>
+                        <h3>MEMS From Scratch to Product</h3>
+                        <p>A rigorous 20-lecture architectural framework tracking advanced physical device design from fundamental mask layouts and manufacturing processes up through integrated test metrics.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hardware Section -->
+            <section id="hardware">
+                <h2>Engineering & Hardware Prototypes</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <div class="card-meta">Embedded Systems Application</div>
+                        <h3>Synchronized Microcontroller Traction Array</h3>
+                        <p>A multi-motor embedded architecture utilizing customized digital logic pin-routing configurations to achieve microsecond-level speed matching and feedback control loop accuracy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact & Networks</h2>
+                <div class="card">
+                    <ul class="contact-list">
+                        <li><strong>Academic Coordinates:</strong> Institutional Lab, Pilani, Rajasthan, India</li>
+                        <li><strong>Digital Networks:</strong> <a href="#">Google Scholar Profile</a> | <a href="#">ResearchGate</a> | <a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
